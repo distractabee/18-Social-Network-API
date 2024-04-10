@@ -1,0 +1,20 @@
+{
+    "name": "social_network_api",
+    "author": "",
+    "version": "1.0.0",
+    "main": "index.js",
+    "devDependencies": {
+        "nodemon": "^2.0.9"
+    },
+    "scripts": {
+        "start": "node index",
+        "dev": "nodemon index.js"
+    },
+    "dependencies": {
+        "express": "^4.19.2",
+        "mongoose": "^8.2.4"
+    },
+    "license": "MIT",
+    "description": ""
+
+}
