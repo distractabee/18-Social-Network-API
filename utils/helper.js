@@ -18,7 +18,7 @@ const formatDate = (date) => {
 
 module.exports = (
     timestamp,
-    { monthLength = 'short', dateSuffix = true } {}
+    { monthLength = 'short', dateSuffix = true } = {}
 ) => {
     let months;
 
