@@ -21,7 +21,7 @@ To run this project you will need to have:
 
 Clone the repository to your local device and navigate to the directory that contains the repository using Git Bash/Terminal. 
 
-Run npm i to install the required dependencies. Then run npm start to start the connection to the MongoDB server. Navigate to insomnia and go to http://localhost:3001 to interact with the application
+Run `npm i` to install the required dependencies. Then run `npm start` to start the connection to the MongoDB server. Navigate to Insomnia and go to http://localhost:3001 to interact with the application
 
 ## Usage
 
