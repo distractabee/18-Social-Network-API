@@ -5,6 +5,8 @@ const userController = {
     async getUsers(req, res) {
         try {
           const users = await User.find()
+          .select('-__v')
+
           res.json(users);
         } catch (err) {
           res.status(500).json(err);
@@ -13,7 +15,8 @@ const userController = {
       // Get single user by id
       async getSingleUser(req, res) {
         try {
-          const user = await User.findOne({ _id: req.params.userId })
+          const user = await User.findOne({ _id: req.params.id })
+          .select('-__v')
           .populate('friends')
           .populate('thoughts');
     
@@ -40,7 +43,7 @@ const userController = {
 async updateUser(req, res) {
     try {
       const updatedUser = await User.findOneAndUpdate(
-        { _id: req.params.userId },
+        { _id: req.params.id },
         { $set: req.body },
         { runValidators: true, new: true }
       );
@@ -58,7 +61,7 @@ async updateUser(req, res) {
 // delete user
 async deleteUser(req, res) {
     try {
-      const deletedUser = await User.findOneAndDelete({ _id: req.params.userId });
+      const deletedUser = await User.findOneAndDelete({ _id: req.params.id });
 
       if (!deletedUser) {
         return res.status(404).json({ message: 'No user with that ID' });
@@ -71,7 +74,7 @@ async deleteUser(req, res) {
 // add friend
 async addFriend(req, res) {
     try {
-        const newFriend = await User.findOneAndUpdate({ _id: req.params.userId}, { $pull: { friends: req.params.friendId } }, { new: true });
+        const newFriend = await User.findOneAndUpdate({ _id: req.params.id}, { $pull: { friends: req.params.id } }, { new: true });
 
         if (!newFriend) {
             return res.status(404).json({ message: 'No user with this ID!' })
@@ -86,7 +89,7 @@ async addFriend(req, res) {
 
 async removeFriend(req, res) {
     try {
-        const deletedFriend = await User.findOneAndUpdate({ _id: req.params.userId}, { $pull: { friends: req.params.friendId } }, { new: true });
+        const deletedFriend = await User.findOneAndUpdate({ _id: req.params.id}, { $pull: { friends: req.params.id } }, { new: true });
 
         if (!deletedFriend) {
             return res.status(404).json({ message: 'No user with this ID!' })

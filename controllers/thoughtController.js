@@ -13,7 +13,7 @@ const thoughtController = {
     },
 
     getSingleThought(req, res) {
-        Thought.findOne({ _id: req.params.thoughtId })
+        Thought.findOne({ _id: req.params.id })
         .then(dbThoughtData => {
             if (!dbThoughtData) {
                 res.status(404).json({ message: 'Head Empty, No Thoughts! '})
@@ -38,7 +38,7 @@ const thoughtController = {
 
     editThought(req, res) {
         Thought.findOneAndUpdate(
-            { _id: req.params.thoughtId },
+            { _id: req.params.id },
             { $set: req.body },
             { runValidators: true, new: true }
         )
@@ -53,7 +53,7 @@ const thoughtController = {
     },
 
     deleteThought(req, res) {
-        Thought.findOneAndRemove({ _id: req.params.thoughtId })
+        Thought.findOneAndRemove({ _id: req.params.id })
         .then((deletedThought) => {
             if (!deletedThought) {
                 

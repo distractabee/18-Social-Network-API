@@ -23,3 +23,4 @@ router.route(':thoughtId').get(getSingleThought).put(editThought).delete(deleteT
 // post to create a reaction stored in a single thought's reactions array
 
 // delete to pull and remove a reaction by the reactionId value
+module.exports = router;

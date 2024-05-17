@@ -2,13 +2,13 @@
     "name": "social_network_api",
     "author": "",
     "version": "1.0.0",
-    "main": "index.js",
+    "main": "server.js",
     "devDependencies": {
         "nodemon": "^2.0.9"
     },
     "scripts": {
-        "start": "node index",
-        "dev": "nodemon index.js"
+        "start": "node server",
+        "dev": "nodemon server.js"
     },
     "dependencies": {
         "express": "^4.19.2",

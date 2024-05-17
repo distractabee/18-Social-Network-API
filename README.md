@@ -25,9 +25,6 @@ Run `npm i` to install the required dependencies. Then run `npm start` to start 
 
 ## Usage
 
-
-
-
 ![alt text](assets/images/screenshot.png)
 
 
