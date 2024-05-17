@@ -25,7 +25,7 @@ Run `npm i` to install the required dependencies. Then run `npm start` to start 
 
 ## Usage
 
-You can see a video of me interacting with the API using Insomnia [here]()
+You can see a video of me interacting with the API using Insomnia [here](https://drive.google.com/file/d/1yoXTkOSlbQBIr4_8hV4THXVCcpkUu85x/view)
 
 ![creating a user with the POST route](screenshots/createUser.png)
 
@@ -39,7 +39,7 @@ You can see a video of me interacting with the API using Insomnia [here]()
 
 ## Credits
 
-I received a lot of help on this project and shared code with my classmates in the SMU Full Stack Web Development bootcamp
+I received a lot of help on this project and shared code with my classmates in the SMU Full Stack Web Development bootcamp.
 
 ## License
 
