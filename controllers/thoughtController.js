@@ -54,5 +54,10 @@ const thoughtController = {
 
     deleteThought(req, res) {
         Thought.findOneAndRemove({ _id: req.params.ThoughtId })
+        .then((deletedThought) => {
+            if (!deletedThought) {
+                
+            }
+        })
     }
 }
