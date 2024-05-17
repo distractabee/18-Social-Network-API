@@ -25,7 +25,16 @@ Run `npm i` to install the required dependencies. Then run `npm start` to start 
 
 ## Usage
 
-![alt text](assets/images/screenshot.png)
+You can see a video of me interacting with the API using Insomnia [here]()
+
+![creating a user with the POST route](screenshots/createUser.png)
+
+![Getting a user with the GET route](screenshots/getUsers.png)
+
+## Known Issues
+
+- Currently no routes to add reactions to thoughts
+- GET All Users/Single User requests do not populate thoughts or friends
 
 
 ## Credits
