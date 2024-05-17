@@ -1,3 +1,5 @@
+const router = require('express').Router();
+
 // endpoint /api/thoughts
 
 // get all thoughts
